@@ -126,9 +126,9 @@
     // scale down CIImage
     float bufferWidth = CVPixelBufferGetWidth(imageBuffer);
     float bufferHeight = CVPixelBufferGetHeight(imageBuffer);
-    float scale = scale = bufferHeight>bufferWidth ? 720 / bufferWidth : 720 / bufferHeight;;
+    float scale = scale = bufferHeight>bufferWidth ? 3840 / bufferWidth : 3840 / bufferHeight;;
     if (position == 1) {
-        scale = bufferHeight>bufferWidth ? 400 / bufferWidth : 400 / bufferHeight;
+        scale = bufferHeight>bufferWidth ? 2160 / bufferWidth : 2160 / bufferHeight;
     }
     CIFilter* scaleFilter = [CIFilter filterWithName:@"CILanczosScaleTransform"];
     [scaleFilter setValue:ciImage forKey:kCIInputImageKey];
